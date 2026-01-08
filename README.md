@@ -6,8 +6,8 @@
 - **CCID:** `<xuantin4>`
 
 ## References and Resources
+General online resources were consulted to review Java constructors, inheritance, and abstract classes.
 
-List any resources used here, or simply put `N/A` if not applicable.
 
 ## Verbal Collaboration
 
