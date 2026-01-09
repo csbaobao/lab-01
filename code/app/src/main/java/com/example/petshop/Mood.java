@@ -1,0 +1,26 @@
+package com.example.petshop;
+
+import java.util.Date;
+
+public abstract class Mood {
+    private Date date;
+
+    public Mood() {
+        this.date = new Date();
+    }
+
+    public Mood(Date date) {
+        this.date = date;
+    }
+
+    // getter
+    public Date getDate() {
+        return date;
+    }
+    // setter
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public abstract String getMood();
+}

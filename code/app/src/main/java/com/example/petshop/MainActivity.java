@@ -7,8 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
+import android.widget.TextView;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,5 +35,21 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Pettable> pettables = new ArrayList<>();
         pettables.add(cat);
         pettables.add(dog);
+        ArrayList<Mood> moods = new ArrayList<>();
+        Mood happy = new HappyMood();
+        Mood sad = new SadMood(new Date(0));
+        sad.setDate(new Date());
+
+        moods.add(happy);
+        moods.add(sad);
+
+        String text = "";
+        for (Mood m : moods) {
+            text = text + m.getMood() + " at " + m.getDate() + "\n";
+        }
+
+        TextView t = findViewById(R.id.out);
+        t.setText(text);
+
     }
 }
